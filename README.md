@@ -53,29 +53,29 @@ CREATE WAREHOUSE IF NOT EXISTS AI_WH WITH WAREHOUSE_SIZE='X-SMALL';
 CREATE OR REPLACE DATABASE AI_DEVELOPMENT;
 
 -- Create the API integration with Github
-CREATE OR REPLACE API INTEGRATION GITHUB_INTEGRATION_CORTEX_AGENTS_DEMO
+CREATE OR REPLACE API INTEGRATION GITHUB_INTEGRATION_SNOWFLAKE_INTELLIGENCE_DEMOS
     api_provider = git_https_api
     api_allowed_prefixes = ('https://github.com/michaelgorkow/')
     enabled = true
     comment='Git integration for Github Repository from Michael Gorkow.';
 
 -- Create the integration with the Github demo repository
-CREATE GIT REPOSITORY GITHUB_REPO_CORTEX_AGENTS_DEMO
-	ORIGIN = 'https://github.com/michaelgorkow/snowflake_cortex_agents_demo' 
-	API_INTEGRATION = 'GITHUB_INTEGRATION_CORTEX_AGENTS_DEMO' 
+CREATE GIT REPOSITORY GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS
+	ORIGIN = 'https://github.com/michaelgorkow/snowflake-intelligence-demos' 
+	API_INTEGRATION = 'GITHUB_INTEGRATION_SNOWFLAKE_INTELLIGENCE_DEMOS' 
 	COMMENT = 'Github Repository from Michael Gorkow with demos for Cortex Agents.';
 
 -- Run the installation of the Demo
-EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_CORTEX_AGENTS_DEMO/branches/main/setup.sql;
+EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/setup.sql;
 ```
 
 ## Deploy Demo Use Cases
-Every demo use case has its own folder [here](https://github.com/michaelgorkow/snowflake_cortex_agents_demo/tree/main/use_cases).
+Every demo use case has its own folder [here](https://github.com/michaelgorkow/snowflake-intelligence-demos/tree/main/use_cases).
 In order to deploy a use case you simply run the __setup.sql__ from the respective folder.
 
 Example for deploying the Food and Beverage Company use case:
 ```sql
-EXECUTE IMMEDIATE FROM @CORTEX_AGENTS_DEMO.PUBLIC.GITHUB_REPO_CORTEX_AGENTS_DEMO/branches/main/use_cases/The_Food_and_Beverage_Company/setup/setup.sql
+EXECUTE IMMEDIATE FROM @CORTEX_AGENTS_DEMO.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/use_cases/The_Food_and_Beverage_Company/setup/setup.sql
   USING (BRANCH => 'main', EXECUTE_NOTEBOOKS => TRUE) DRY_RUN = FALSE;
 ```
 
