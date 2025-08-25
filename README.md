@@ -66,7 +66,7 @@ CREATE GIT REPOSITORY GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS
 	COMMENT = 'Github Repository from Michael Gorkow with demos for Cortex Agents.';
 
 -- Run the installation of the Demo
-EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/setup.sql;
+EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/setup/setup.sql;
 ```
 
 ## Deploy Demo Use Cases
