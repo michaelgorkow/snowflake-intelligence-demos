@@ -1,0 +1,135 @@
+{
+  "Premium Confectionery Ltd": {
+    "SUPPLIER_ID": "SUP_ID_00000",
+    "COUNTRY": "United Kingdom",
+    "CITY": "London",
+    "STREET": "Baker Street 221B",
+    "CONTACT_PERSON": "Margaret Thompson"
+  },
+  "Premium Coffee Roasters Co": {
+    "SUPPLIER_ID": "SUP_ID_00001",
+    "COUNTRY": "Italy",
+    "CITY": "Milan",
+    "STREET": "Via Torino 45",
+    "CONTACT_PERSON": "Giuseppe Rossi"
+  },
+  "Baby Nutrition Specialists": {
+    "SUPPLIER_ID": "SUP_ID_00002",
+    "COUNTRY": "Germany",
+    "CITY": "Munich",
+    "STREET": "Maximilianstrasse 12",
+    "CONTACT_PERSON": "Klaus Mueller"
+  },
+  "Natural Springs Co": {
+    "SUPPLIER_ID": "SUP_ID_00003",
+    "COUNTRY": "France",
+    "CITY": "Lyon",
+    "STREET": "Rue de la République 89",
+    "CONTACT_PERSON": "Marie Dubois"
+  },
+  "Budget Foods Direct": {
+    "SUPPLIER_ID": "SUP_ID_00004",
+    "COUNTRY": "Spain",
+    "CITY": "Barcelona",
+    "STREET": "Carrer de Balmes 156",
+    "CONTACT_PERSON": "Carlos Martinez"
+  },
+  "Pet Nutrition Pro": {
+    "SUPPLIER_ID": "SUP_ID_00005",
+    "COUNTRY": "Netherlands",
+    "CITY": "Amsterdam",
+    "STREET": "Prinsengracht 263",
+    "CONTACT_PERSON": "Jan van der Berg"
+  },
+  "Everyday Essentials Supply": {
+    "SUPPLIER_ID": "SUP_ID_00006",
+    "COUNTRY": "Belgium",
+    "CITY": "Brussels",
+    "STREET": "Avenue Louise 54",
+    "CONTACT_PERSON": "Sophie Van Damme"
+  },
+  "Value Supply Chain": {
+    "SUPPLIER_ID": "SUP_ID_00007",
+    "COUNTRY": "Poland",
+    "CITY": "Warsaw",
+    "STREET": "Aleje Jerozolimskie 123",
+    "CONTACT_PERSON": "Pawel Kowalski"
+  },
+  "Premium Beverage Group": {
+    "SUPPLIER_ID": "SUP_ID_00008",
+    "COUNTRY": "Austria",
+    "CITY": "Vienna",
+    "STREET": "Kärntner Strasse 78",
+    "CONTACT_PERSON": "Franz Weber"
+  },
+  "Euro Food Imports": {
+    "SUPPLIER_ID": "SUP_ID_00009",
+    "COUNTRY": "Portugal",
+    "CITY": "Lisbon",
+    "STREET": "Rua Augusta 145",
+    "CONTACT_PERSON": "Ana Silva"
+  },
+  "Health Foods International": {
+    "SUPPLIER_ID": "SUP_ID_00010",
+    "COUNTRY": "Sweden",
+    "CITY": "Stockholm",
+    "STREET": "Drottninggatan 92",
+    "CONTACT_PERSON": "Erik Larsson"
+  },
+  "Artisan Coffee Distributors": {
+    "SUPPLIER_ID": "SUP_ID_00011",
+    "COUNTRY": "Italy",
+    "CITY": "Rome",
+    "STREET": "Via del Corso 234",
+    "CONTACT_PERSON": "Marco Bianchi"
+  },
+  "Standard Food Distributors": {
+    "SUPPLIER_ID": "SUP_ID_00012",
+    "COUNTRY": "Germany",
+    "CITY": "Berlin",
+    "STREET": "Unter den Linden 67",
+    "CONTACT_PERSON": "Hans Schmidt"
+  },
+  "Frozen Foods Premium": {
+    "SUPPLIER_ID": "SUP_ID_00013",
+    "COUNTRY": "Denmark",
+    "CITY": "Copenhagen",
+    "STREET": "Strøget 45",
+    "CONTACT_PERSON": "Niels Hansen"
+  },
+  "Gourmet Bean Supply": {
+    "SUPPLIER_ID": "SUP_ID_00014",
+    "COUNTRY": "France",
+    "CITY": "Paris",
+    "STREET": "Champs-Élysées 178",
+    "CONTACT_PERSON": "Pierre Moreau"
+  },
+  "Regional Beverage Co": {
+    "SUPPLIER_ID": "SUP_ID_00015",
+    "COUNTRY": "Czech Republic",
+    "CITY": "Prague",
+    "STREET": "Václavské náměstí 34",
+    "CONTACT_PERSON": "Pavel Novak"
+  },
+  "Specialty Beverage Solutions": {
+    "SUPPLIER_ID": "SUP_ID_00016",
+    "COUNTRY": "Ireland",
+    "CITY": "Dublin",
+    "STREET": "Grafton Street 87",
+    "CONTACT_PERSON": "Sean O'Connor"
+  },
+  "Organic Food Suppliers": {
+    "SUPPLIER_ID": "SUP_ID_00017",
+    "COUNTRY": "Switzerland",
+    "CITY": "Zurich",
+    "STREET": "Bahnhofstrasse 112",
+    "CONTACT_PERSON": "Hans Müller"
+  },
+  "Farm Fresh Dairy Co": {
+    "SUPPLIER_ID": "SUP_ID_00018",
+    "COUNTRY": "Norway",
+    "CITY": "Oslo",
+    "STREET": "Karl Johans gate 56",
+    "CONTACT_PERSON": "Olav Nordahl"
+  }
+}

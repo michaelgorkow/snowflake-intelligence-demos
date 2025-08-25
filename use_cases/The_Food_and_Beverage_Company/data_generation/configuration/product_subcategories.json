@@ -1,0 +1,25 @@
+{
+  "Beverages": {
+    "Coffee": 0.75,
+    "Water": 0.25
+  },
+  "Food Products": {
+    "Dairy": 0.35,
+    "Frozen and chilled foods": 0.25,
+    "Cooking aids": 0.15,
+    "Breakfast cereals and bars": 0.15,
+    "Baby Food": 0.10
+  },
+  "Confectionery": {
+    "Chocolate bars": 0.70,
+    "Premium Chocolate": 0.30
+  },
+  "Pet Care": {
+    "Pet food and treats": 1.0
+  },
+  "Health & Nutrition": {
+    "Nutritional supplements": 0.60,
+    "Performance nutrition": 0.25,
+    "Medical nutrition products": 0.15
+  }
+}

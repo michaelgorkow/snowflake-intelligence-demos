@@ -1,0 +1,167 @@
+{
+  "Coffee Production Issues Start": {
+    "revenue_multiplier": 0.75,
+    "products": [
+      "Artisan Single-Origin Ethiopian Blend",
+      "Reserve French Roast Whole Bean",
+      "Gourmet Espresso Capsules Gold",
+      "Morning Blend Ground Coffee",
+      "Colombian Medium Roast",
+      "Breakfast Blend K-Cups",
+      "Decaf House Blend",
+      "Instant Coffee Classic",
+      "Economy Dark Roast",
+      "Quick Brew Coffee Granules"
+    ],
+    "start_date": "2024-05-01",
+    "end_date": "2024-06-30",
+    "platforms": {
+      "options": [
+        "Instagram",
+        "YouTube",
+        "Website",
+        "Facebook",
+        "TikTok"
+      ],
+      "probabilities": [1, 1, 1, 1, 1]
+    },
+    "sessions": {
+      "min": 40,
+      "mean": 80,
+      "max": 120
+    }
+  },
+  "Cocoa Price Spike": {
+    "revenue_multiplier": 0.45,
+    "products": [
+      "Belgian Dark Chocolate 70%",
+      "Single-Origin Madagascar Bar",
+      "Artisan Sea Salt Caramel",
+      "Milk Chocolate Classic",
+      "Cookies & Cream Bar",
+      "Almond Crunch Chocolate",
+      "Peanut Butter Filled Bar"
+    ],
+    "start_date": "2024-02-01",
+    "end_date": "2024-03-31",
+    "platforms": {
+      "options": [
+        "Instagram",
+        "YouTube",
+        "Website",
+        "Facebook",
+        "TikTok"
+      ],
+      "probabilities": [1, 1, 1, 1, 1]
+    },
+    "sessions": {
+      "min": 30,
+      "mean": 70,
+      "max": 100
+    }
+  },
+  "Sweet December": {
+    "revenue_multiplier": 1.5,
+    "products": [
+      "Milk Chocolate Classic",
+      "Cookies & Cream Bar",
+      "Almond Crunch Chocolate",
+      "Peanut Butter Filled Bar"
+    ],
+    "start_date": "2024-12-01",
+    "end_date": "2024-12-31",
+    "platforms": {
+      "options": [
+        "Instagram",
+        "YouTube",
+        "Website",
+        "Facebook",
+        "TikTok"
+      ],
+      "probabilities": [10, 5, 2, 7, 9]
+    },
+    "sessions": {
+      "min": 90,
+      "mean": 150,
+      "max": 250
+    }
+  },
+  "Babys First, Parents Choice": {
+    "revenue_multiplier": 1.5,
+    "products": [
+      "Organic First Fruits Puree",
+      "Farm Fresh Vegetable Medley",
+      "Wholesome Quinoa Baby Cereal",
+      "Apple Cinnamon Baby Food",
+      "Rice Cereal Original",
+      "Banana Strawberry Blend"
+    ],
+    "start_date": "2025-02-01",
+    "end_date": "2025-03-31",
+    "platforms": {
+      "options": [
+        "Instagram",
+        "YouTube",
+        "Website",
+        "Facebook",
+        "TikTok"
+      ],
+      "probabilities": [1, 1, 4, 3, 1]
+    },
+    "sessions": {
+      "min": 95,
+      "mean": 170,
+      "max": 240
+    }
+  },
+  "Coffee Lovers": {
+    "revenue_multiplier": 1.35,
+    "products": [
+      "Artisan Single-Origin Ethiopian Blend",
+      "Reserve French Roast Whole Bean",
+      "Gourmet Espresso Capsules Gold"
+    ],
+    "start_date": "2025-04-01",
+    "end_date": "2025-05-30",
+    "platforms": {
+      "options": [
+        "Instagram",
+        "YouTube",
+        "Website",
+        "Facebook",
+        "TikTok"
+      ],
+      "probabilities": [1, 1, 4, 3, 1]
+    },
+    "sessions": {
+      "min": 90,
+      "mean": 160,
+      "max": 250
+    }
+  },
+  "Stay Hydrated Campaign": {
+    "revenue_multiplier": 1.2,
+    "products": [
+      "Alpine Spring Natural Mineral Water",
+      "Artesian Well Premium Water",
+      "Glacier Peak Alkaline Water"
+    ],
+    "start_date": "2025-06-01",
+    "end_date": "2025-07-30",
+    "platforms": {
+      "options": [
+        "Instagram",
+        "YouTube",
+        "Website",
+        "Facebook",
+        "TikTok"
+      ],
+      "probabilities": [5, 3, 1, 1, 1]
+    },
+    "sessions": {
+      "min": 100,
+      "mean": 200,
+      "max": 300
+    }
+  }
+}

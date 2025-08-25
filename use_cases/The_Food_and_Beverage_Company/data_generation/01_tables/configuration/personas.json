@@ -1,0 +1,112 @@
+{
+    "luxury_connoisseur": {
+        "num_customers": 1000,
+        "persona_description": "This persona includes affluent adults aged 35-65 who prioritize quality over price. They seek premium, artisanal products and are willing to pay more for exceptional experiences. They prefer sophisticated marketing and exclusive offerings.",
+        "gender": {
+            "genders": ["Female", "Male"],
+            "probabilities": [0.45, 0.55]
+        },
+        "ages": {
+            "min": 30,
+            "mean": 50,
+            "max": 85,
+            "stddev": 15
+        },
+        "platform_preference": {
+            "platforms": ["Instagram", "YouTube", "Website", "Facebook", "TikTok"],
+            "probabilities": [0.35, 0.25, 0.25, 0.1, 0.05]
+        },
+        "countries": {
+            "countries": ["Switzerland", "Germany", "France", "Austria", "Luxembourg", "Netherlands", "Denmark", "Sweden", "Norway", "United Kingdom"],
+            "probabilities": [0.15, 0.15, 0.15, 0.1, 0.05, 0.1, 0.08, 0.08, 0.07, 0.07]
+        }
+    },
+    "fitness_enthusiast": {
+        "num_customers": 1000,
+        "persona_description": "This persona includes health-conscious individuals aged 22-45 who prioritize nutrition and performance. They actively seek protein-rich foods, supplements, and organic options to support their active lifestyle.",
+        "gender": {
+            "genders": ["Male", "Female"],
+            "probabilities": [0.6, 0.4]
+        },
+        "ages": {
+            "min": 18,
+            "mean": 30,
+            "max": 45,
+            "stddev": 10
+        },
+        "platform_preference": {
+            "platforms": ["Instagram", "YouTube", "TikTok", "Website", "Facebook"],
+            "probabilities": [0.4, 0.3, 0.15, 0.1, 0.05]
+        },
+        "countries": {
+            "countries": ["Germany", "United Kingdom", "Netherlands", "Sweden", "Denmark", "Norway", "Finland", "Switzerland", "Austria", "France"],
+            "probabilities": [0.2, 0.15, 0.12, 0.1, 0.1, 0.08, 0.08, 0.07, 0.05, 0.05]
+        }
+    },
+    "family_caretaker": {
+        "num_customers": 1000,
+        "persona_description": "This persona includes parents and caregivers aged 28-50 who focus on family nutrition and value. They purchase a mix of standard and budget products, prioritizing safety and nutritional value for their families, especially children.",
+        "gender": {
+            "genders": ["Female", "Male"],
+            "probabilities": [0.7, 0.3]
+        },
+        "ages": {
+            "min": 28,
+            "mean": 40,
+            "max": 50,
+            "stddev": 10
+        },
+        "platform_preference": {
+            "platforms": ["Facebook", "Instagram", "YouTube", "Website", "TikTok"],
+            "probabilities": [0.35, 0.25, 0.2, 0.15, 0.05]
+        },
+        "countries": {
+            "countries": ["Germany", "France", "United Kingdom", "Italy", "Spain", "Netherlands", "Poland", "Belgium", "Czech Republic", "Portugal"],
+            "probabilities": [0.18, 0.15, 0.12, 0.1, 0.1, 0.08, 0.08, 0.07, 0.07, 0.05]
+        }
+    },
+    "budget_conscious": {
+        "num_customers": 1000,
+        "persona_description": "This persona includes cost-conscious consumers aged 18-35 and 55+ who prioritize value for money. They prefer budget and standard products, shop for deals, and focus on essential items rather than premium experiences.",
+        "gender": {
+            "genders": ["Female", "Male"],
+            "probabilities": [0.55, 0.45]
+        },
+        "ages": {
+            "min": 18,
+            "mean": 25,
+            "max": 35,
+            "stddev": 8
+        },
+        "platform_preference": {
+            "platforms": ["Facebook", "Website", "YouTube", "Instagram", "TikTok"],
+            "probabilities": [0.4, 0.25, 0.2, 0.1, 0.05]
+        },
+        "countries": {
+            "countries": ["Poland", "Czech Republic", "Hungary", "Slovakia", "Romania", "Bulgaria", "Croatia", "Slovenia", "Portugal", "Greece"],
+            "probabilities": [0.15, 0.12, 0.12, 0.1, 0.1, 0.1, 0.08, 0.08, 0.08, 0.07]
+        }
+    },
+    "young_professional": {
+        "num_customers": 1000,
+        "persona_description": "This persona includes career-focused individuals aged 22-40 who value convenience and quality. They prefer standard to premium products, especially coffee, quick meals, and items that support their busy lifestyle.",
+        "gender": {
+            "genders": ["Female", "Male"],
+            "probabilities": [0.5, 0.5]
+        },
+        "ages": {
+            "min": 20,
+            "mean": 30,
+            "max": 40,
+            "stddev": 10
+        },
+        "platform_preference": {
+            "platforms": ["Instagram", "TikTok", "YouTube", "Website", "Facebook"],
+            "probabilities": [0.35, 0.25, 0.2, 0.15, 0.05]
+        },
+        "countries": {
+            "countries": ["Germany", "United Kingdom", "France", "Netherlands", "Sweden", "Denmark", "Belgium", "Austria", "Ireland", "Finland"],
+            "probabilities": [0.2, 0.15, 0.15, 0.1, 0.1, 0.08, 0.08, 0.06, 0.04, 0.04]
+        }
+    }
+}

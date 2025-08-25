@@ -1,0 +1,37 @@
+{
+  "Beverages": {
+    "base_revenue": 85000,
+    "growth_rate": 0.0003,
+    "seasonality_amplitude": 0.15,
+    "summer_boost": true,
+    "weekend_factor": 1.1
+  },
+  "Food Products": {
+    "base_revenue": 120000,
+    "growth_rate": 0.0002,
+    "seasonality_amplitude": 0.1,
+    "summer_boost": false,
+    "weekend_factor": 0.95
+  },
+  "Confectionery": {
+    "base_revenue": 45000,
+    "growth_rate": 0.0001,
+    "seasonality_amplitude": 0.25,
+    "summer_boost": false,
+    "weekend_factor": 1.15
+  },
+  "Pet Care": {
+    "base_revenue": 35000,
+    "growth_rate": 0.0004,
+    "seasonality_amplitude": 0.08,
+    "summer_boost": true,
+    "weekend_factor": 1.05
+  },
+  "Health & Nutrition": {
+    "base_revenue": 55000,
+    "growth_rate": 0.0005,
+    "seasonality_amplitude": 0.2,
+    "summer_boost": true,
+    "weekend_factor": 0.9
+  }
+}
