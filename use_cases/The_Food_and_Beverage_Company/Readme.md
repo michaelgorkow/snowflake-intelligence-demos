@@ -11,8 +11,7 @@ The company leverages advanced GenAI capabilities, including Snowflake's [Cortex
 ## Use Case Deployment
 Execute this SQL Query to create and run the notebook in your account which will generate data and required services.
 ```sql
-EXECUTE IMMEDIATE FROM @CORTEX_AGENTS_DEMO.PUBLIC.GITHUB_REPO_CORTEX_AGENTS_DEMO/branches/main/use_cases/staybnb/_internal/setup.sql
-  USING (BRANCH => 'main', EXECUTE_NOTEBOOKS => TRUE) DRY_RUN = FALSE;
+EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/use_cases/The_Food_and_Beverage_Company/setup/setup.sql;
 ```
 
 ## What you'll learn
