@@ -20,7 +20,7 @@ RUNTIME_VERSION = '3.11'
 PACKAGES = ('requests', 'beautifulsoup4')
 IMPORTS = ('@CUSTOM_TOOLS/read_webpage.py')
 EXTERNAL_ACCESS_INTEGRATIONS = (ai_external_access_integration)
-HANDLER = 'read_webpage.read_webpage'
+HANDLER = 'read_webpage.read_webpage';
 
 GRANT USAGE ON FUNCTION read_webpage(TEXT) TO ROLE AI_ENGINEER;
 
