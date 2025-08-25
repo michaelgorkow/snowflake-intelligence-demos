@@ -26,6 +26,7 @@ GRANT USAGE ON FUNCTION read_webpage(TEXT) TO ROLE AI_ENGINEER;
 
 -- Tables, procedures and search services for the Chart App 
 CREATE OR REPLACE TABLE AGENT_GENERATED_CHARTS (
+    CHART_UUID VARCHAR(134217728),
     CREATION_TIMESTAMP TIMESTAMP,
     USER_NAME VARCHAR(134217728),
     QUESTION VARCHAR(134217728),
@@ -48,7 +49,7 @@ $$
 def save_chart(session, question: str, sql_query: str, chart_spec: str, semantic_view_name: str) -> str:
     sql_statement = """
 INSERT INTO AGENT_GENERATED_CHARTS
-SELECT CURRENT_TIMESTAMP(), CURRENT_USER(), ?, ?, ?, ?
+SELECT UUID_STRING(), CURRENT_TIMESTAMP(), CURRENT_USER(), ?, ?, ?, ?
 """
 
     session.sql(sql_statement, params=[question, sql_query, chart_spec, semantic_view_name]).collect()
