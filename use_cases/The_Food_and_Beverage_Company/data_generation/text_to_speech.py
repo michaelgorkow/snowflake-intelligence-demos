@@ -38,7 +38,7 @@ class TextToSpeech:
     
         for recording_id, recording in enumerate(recordings['recordings']):
             print(f"[Unstructured Data] Generating recording {recording_id+1}/{total_recordings}...", end='\r', flush=True)
-            
+            recording_date = recording['date']
             if np.random.random() > 0.5:
                 # customer is male, agent is female
                 customer_voice = np.random.choice(self.voices['male_voices'])
@@ -66,6 +66,6 @@ class TextToSpeech:
             
             # Combine all segments at once
             combined = sum(audio_segments, AudioSegment.empty())
-            combined.export(f"{output_folder}/call_center_recording_{recording_id:05d}.wav", format='wav')
+            combined.export(f"{output_folder}/{recording_date}_call_center_recording_{recording_id:05d}.wav", format='wav')
         
         return

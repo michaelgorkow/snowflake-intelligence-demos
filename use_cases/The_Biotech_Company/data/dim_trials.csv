@@ -1,0 +1,16 @@
+TRIAL_ID,TRIAL_NAME,PHASE,STATUS,PRIMARY_ENDPOINT,START_DATE,END_DATE,PLANNED_ENROLLMENT,SPONSOR
+TRL_001,Clinical Study 1,Phase II,Suspended,Dosage,2024-07-24,2025-10-06,363,Research Institute
+TRL_002,Clinical Study 2,Phase I,Suspended,Biomarker Response,2024-08-08,2026-03-17,141,Research Institute
+TRL_003,Clinical Study 3,Phase II,Terminated,Dosage,2023-07-07,2025-05-12,446,Medical University
+TRL_004,Clinical Study 4,Phase III,Completed,Efficacy,2024-04-21,2025-03-08,278,Pharma Global
+TRL_005,Clinical Study 5,Phase I,Suspended,Dosage,2024-01-14,2024-10-22,460,BioTech Corp
+TRL_006,Clinical Study 6,Phase II,Completed,Safety,2023-06-25,2024-06-03,471,Pharma Global
+TRL_007,Clinical Study 7,Phase III,Suspended,Safety,2023-09-04,2025-06-27,82,Research Institute
+TRL_008,Clinical Study 8,Phase II,Completed,Safety,2023-11-27,2025-01-07,420,Medical University
+TRL_009,Clinical Study 9,Phase III,Terminated,Safety,2023-09-04,2025-04-16,446,Pharma Global
+TRL_010,Clinical Study 10,Phase II,Completed,Efficacy,2022-10-26,2024-09-11,485,Research Institute
+TRL_011,Clinical Study 11,Phase I,Ongoing,Efficacy,2023-07-20,2024-08-02,395,BioTech Corp
+TRL_012,Clinical Study 12,Phase I,Completed,Efficacy,2023-07-08,2025-01-06,94,Research Institute
+TRL_013,Clinical Study 13,Phase II,Suspended,Biomarker Response,2024-04-26,2025-12-06,350,Pharma Global
+TRL_014,Clinical Study 14,Phase I,Completed,Safety,2023-02-12,2025-01-22,331,Research Institute
+TRL_015,Clinical Study 15,Phase II,Terminated,Efficacy,2023-07-24,2025-01-10,360,Pharma Global
