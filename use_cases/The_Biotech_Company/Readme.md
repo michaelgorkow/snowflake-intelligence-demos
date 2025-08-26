@@ -19,19 +19,19 @@ The dataset consists of **5 interconnected tables** following a star schema patt
 The biotech dataset follows a **star schema** design with `FACT_TRIAL_RESULTS` as the central fact table connected to four dimension tables:
 
 ```
-                    ┌──────────────────────────────┐
-                    │        DIM_PATIENTS          │
-                    │                              │
-                    │ • PATIENT_ID (PK)            │
-                    │ • AGE                        │
-                    │ • GENDER                     │
-                    │ • ETHNICITY                  │
-                    │ • BMI                        │
-                    │ • COUNTRY                    │
-                    │ • ENROLLMENT_DATE            │
-                    └──────────────┬───────────────┘
-                                   │
-                                   │
+                      ┌──────────────────────────────┐
+                      │        DIM_PATIENTS          │
+                      │                              │
+                      │ • PATIENT_ID (PK)            │
+                      │ • AGE                        │
+                      │ • GENDER                     │
+                      │ • ETHNICITY                  │
+                      │ • BMI                        │
+                      │ • COUNTRY                    │
+                      │ • ENROLLMENT_DATE            │
+                      └──────────────┬───────────────┘
+                                     │
+                                     │
          ┌─────────────────────────┐ │ ┌─────────────────────────┐
          │       DIM_DRUGS         │ │ │       DIM_SITES         │
          │                         │ │ │                         │
@@ -47,7 +47,7 @@ The biotech dataset follows a **star schema** design with `FACT_TRIAL_RESULTS` a
                        │             │               │
                        └─────────────┼───────────────┘
                                      │
-                    ┌─────────────────▼─────────────────┐
+                    ┌────────────────▼─────────────────┐
                     │        FACT_TRIAL_RESULTS        │
                     │                                  │
                     │ • RESULT_ID                      │
@@ -65,10 +65,10 @@ The biotech dataset follows a **star schema** design with `FACT_TRIAL_RESULTS` a
                     │ • COMPLIANCE_RATE                │
                     │ • OUTCOME                        │
                     │ • VISIT_DATE                     │
-                    └─────────────────┬─────────────────┘
+                    └─────────────────┬────────────────┘
                                       │
                                       │
-                    ┌─────────────────▼─────────────────┐
+                    ┌─────────────────▼────────────────┐
                     │        DIM_TRIALS                │
                     │                                  │
                     │ • TRIAL_ID (PK)                  │
