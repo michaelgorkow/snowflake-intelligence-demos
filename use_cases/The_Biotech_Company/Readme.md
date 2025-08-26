@@ -207,77 +207,6 @@ Comprehensive trial results connecting patients, drugs, sites, and trials with o
 - **Trials**: 15 clinical trials across 3 phases
 - **Results**: 1,621 individual patient outcome records
 
-## 🤖 Text-to-SQL Agent Capabilities
-
-This dataset is designed to demonstrate how AI agents can translate natural language questions into SQL queries for pharmaceutical analytics. Here are the types of questions the agent can answer:
-
-### 🎯 Clinical Trial Performance Analysis
-
-**Example Questions:**
-- *"What is the average improvement score for each drug category?"*
-- *"Which Phase III trials had the highest success rates?"*
-- *"Show me the completion rates by trial phase and therapeutic area"*
-- *"What percentage of patients showed improvement scores above 20?"*
-
-**Sample Query Generated:**
-```sql
-SELECT 
-    d.CATEGORY,
-    AVG(f.IMPROVEMENT) as avg_improvement,
-    COUNT(*) as total_patients
-FROM FACT_TRIAL_RESULTS f
-JOIN DIM_DRUGS d ON f.DRUG_ID = d.DRUG_ID
-GROUP BY d.CATEGORY
-ORDER BY avg_improvement DESC;
-```
-
-### 🏥 Site Performance & Geographic Analysis
-
-**Example Questions:**
-- *"Which clinical sites reported the most adverse events?"*
-- *"What is the patient enrollment by country and site type?"*
-- *"Show me compliance rates by site certification level"*
-- *"Which countries have the highest treatment success rates?"*
-
-### 💊 Drug Development Insights
-
-**Example Questions:**
-- *"Compare success rates between monoclonal antibodies and small molecules"*
-- *"Which drugs had the best safety profile (fewest adverse events)?"*
-- *"What's the correlation between development cost and trial success rate?"*
-- *"Show me efficacy by indication and dosage form"*
-
-### 👥 Patient Demographics & Outcomes
-
-**Example Questions:**
-- *"How do treatment outcomes vary by patient age groups?"*
-- *"What's the success rate breakdown by gender and ethnicity?"*
-- *"Which BMI ranges show the best treatment response?"*
-- *"Show patient compliance patterns by demographic factors"*
-
-### ⚠️ Safety Signal Detection
-
-**Example Questions:**
-- *"Identify patients with multiple serious adverse events"*
-- *"Which drug-site combinations have elevated safety concerns?"*
-- *"Show adverse event patterns by treatment duration"*
-- *"Compare safety profiles across different trial phases"*
-
-### 📈 Regulatory & Business Intelligence
-
-**Example Questions:**
-- *"What's the average time from trial start to completion by phase?"*
-- *"Which sponsors have the highest trial success rates?"*
-- *"Show enrollment efficiency by site and therapeutic area"*
-- *"Calculate cost per successful patient outcome by drug"*
-
-### 🔍 Complex Multi-Dimensional Analysis
-
-**Example Questions:**
-- *"For oncology drugs in Phase II trials, show success rates by site type and patient age group"*
-- *"Compare treatment arm performance for diabetes drugs across different BMI categories"*
-- *"Which combination of factors (age, gender, BMI) predict the best treatment outcomes?"*
-
 # Example Use Cases for different Personas
 
 This section demonstrates how different stakeholders in a biotech organization can leverage the text-to-SQL agent to extract actionable insights from clinical trial data. Each persona represents a typical role with specific analytical needs and decision-making requirements.
@@ -293,25 +222,37 @@ Sarah manages multiple clinical trials across different therapeutic areas. She's
 - Trial timeline and milestone tracking
 - Resource allocation and capacity planning
 
-**Example Question Flow:**
+**Complex Analysis Examples:**
 
-1. **Initial Portfolio Overview**
-   - *"What is the current status of all ongoing trials by phase and therapeutic area?"*
-   - *"Which trials are behind on their planned enrollment targets?"*
+### 1. **Comprehensive Site Performance Investigation**
+**Initial Question:** *"Which clinical sites are underperforming across multiple metrics, and what should be our action plan?"*
 
-2. **Site Performance Analysis**
-   - *"Which clinical sites have the highest patient enrollment rates?"*
-   - *"Show me compliance rates by site certification level and country"*
-   - *"Which sites reported the most adverse events in the last quarter?"*
+**Follow-up Analysis:**
+- *"For sites with high adverse event rates, what's the relationship between investigator count, certification level, and patient safety outcomes?"*
+- *"Among underperforming sites, which therapeutic areas show the biggest gaps in patient compliance and treatment success?"*
+- *"What's the cost-effectiveness of Level 3 certified sites versus lower levels when factoring in enrollment rates, compliance, and outcomes?"*
 
-3. **Patient Recruitment Strategy**
-   - *"What's the patient enrollment by country and site type?"*
-   - *"Which demographic groups are underrepresented in our oncology trials?"*
-   - *"Show enrollment trends by month for Phase II trials"*
+**Required Data:**
+- **FACT_TRIAL_RESULTS**: Adverse events, compliance rates, treatment outcomes, visit dates
+- **DIM_SITES**: Site certification levels, investigator counts, site types, geographic locations
+- **DIM_DRUGS**: Development costs for cost-effectiveness analysis
+- **DIM_TRIALS**: Trial phases and status for context
+- **DIM_PATIENTS**: Demographics for stratification analysis
 
-4. **Operational Optimization**
-   - *"What's the average time from trial start to reaching 50% enrollment by site type?"*
-   - *"Which site and drug combinations have the best patient retention rates?"*
+### 2. **Strategic Enrollment Optimization Across Therapeutic Areas**
+**Initial Question:** *"Our oncology and cardiology programs are struggling with enrollment. What demographic and operational factors should we prioritize to improve recruitment efficiency?"*
+
+**Follow-up Analysis:**
+- *"In countries where we have multiple sites, which site characteristics predict faster enrollment and better retention?"*
+- *"For our target demographics (age 50-70, specific ethnicities), which geographic regions show the highest treatment success rates?"*
+- *"What's the optimal mix of Hospital vs Research Institute vs Private Clinic sites for different therapeutic areas based on enrollment velocity and patient outcomes?"*
+
+**Required Data:**
+- **DIM_PATIENTS**: Age, gender, ethnicity, country, enrollment dates for demographic analysis
+- **DIM_SITES**: Site types, countries, investigator counts for operational optimization
+- **FACT_TRIAL_RESULTS**: Treatment outcomes, compliance rates, treatment duration for retention analysis
+- **DIM_DRUGS**: Drug categories (Oncology, Cardiology) and development costs
+- **DIM_TRIALS**: Planned vs actual enrollment, trial phases, start/end dates
 
 ---
 
@@ -326,27 +267,37 @@ Dr. Rodriguez leads drug development programs and is responsible for evaluating 
 - Dose-response relationships
 - Biomarker and endpoint analysis
 
-**Example Question Flow:**
+**Complex Analysis Examples:**
 
-1. **Drug Performance Overview**
-   - *"What is the average improvement score for each drug category?"*
-   - *"Compare success rates between monoclonal antibodies and small molecules"*
-   - *"Which drugs had the best safety profile with fewest adverse events?"*
+### 1. **Mechanism-Indication Optimization for Portfolio Prioritization**
+**Initial Question:** *"Which drug mechanism and indication combinations show the strongest risk-adjusted potential for our Phase III advancement decisions?"*
 
-2. **Mechanism Analysis**
-   - *"Show efficacy outcomes by drug mechanism across different indications"*
-   - *"What's the correlation between development cost and trial success rate?"*
-   - *"Which therapeutic categories show the highest improvement scores?"*
+**Follow-up Analysis:**
+- *"For Gene Therapy mechanisms showing promise, how do patient demographics and baseline characteristics affect treatment response across different indications?"*
+- *"Among our diabetes indication drugs, what's the relationship between drug mechanism (Small Molecule vs Monoclonal Antibody vs Protein), treatment duration, and sustained efficacy?"*
+- *"Which high-development-cost drugs (>$300M) are justified by their efficacy profiles, and which should be reconsidered?"*
 
-3. **Safety Assessment**
-   - *"Identify patients with multiple serious adverse events by drug type"*
-   - *"Compare adverse event rates between treatment arms and placebo groups"*
-   - *"Show safety profiles for diabetes drugs across different patient age groups"*
+**Required Data:**
+- **DIM_DRUGS**: Drug mechanisms, therapeutic categories, indications, development costs
+- **FACT_TRIAL_RESULTS**: Baseline/endpoint scores, improvement scores, treatment duration, outcomes
+- **DIM_PATIENTS**: Age, BMI, demographics for subgroup efficacy analysis
+- **DIM_TRIALS**: Trial phases for progression analysis
+- **DIM_SITES**: Geographic distribution for global efficacy patterns
 
-4. **Development Strategy**
-   - *"For oncology drugs in Phase II trials, what factors predict treatment success?"*
-   - *"Which drug-indication combinations show the most promise for Phase III advancement?"*
-   - *"What's the success rate for gene therapy mechanisms vs traditional approaches?"*
+### 2. **Safety-Efficacy Profile Deep Dive for Regulatory Strategy**
+**Initial Question:** *"Our monoclonal antibody portfolio is approaching Phase III. What's the comprehensive safety-efficacy profile across patient subpopulations that will strengthen our regulatory submissions?"*
+
+**Follow-up Analysis:**
+- *"For patients with high BMI (>30) and age >65, how do adverse event rates correlate with treatment compliance and efficacy outcomes across our monoclonal antibody drugs?"*
+- *"Which monoclonal antibodies show differential response patterns by ethnicity, and what are the implications for global registration strategies?"*
+- *"Among treatment arms vs controls, what's the therapeutic window analysis showing optimal efficacy with acceptable safety margins?"*
+
+**Required Data:**
+- **DIM_DRUGS**: Drug mechanisms (filter for Monoclonal Antibodies), therapeutic categories
+- **FACT_TRIAL_RESULTS**: Adverse events, serious adverse events, compliance rates, improvement scores, treatment arms
+- **DIM_PATIENTS**: Age, BMI, ethnicity, gender for subpopulation analysis
+- **DIM_TRIALS**: Trial phases, primary endpoints for regulatory context
+- **DIM_SITES**: Countries for global regulatory strategy
 
 ---
 
@@ -361,27 +312,37 @@ Jennifer ensures clinical trials comply with regulatory requirements, manages sa
 - Adverse event trending and reporting
 - Patient safety profiles by demographics
 
-**Example Question Flow:**
+**Complex Analysis Examples:**
 
-1. **Safety Signal Detection**
-   - *"Which drug-site combinations have elevated safety concerns?"*
-   - *"Show adverse event patterns by treatment duration and patient demographics"*
-   - *"Identify any concerning trends in serious adverse events across trials"*
+### 1. **Multi-Dimensional Safety Signal Investigation**
+**Initial Question:** *"We've received queries from regulators about potential safety signals in our neurology portfolio. What's the comprehensive safety profile analysis we need for our response?"*
 
-2. **Regulatory Reporting Preparation**
-   - *"Generate safety summary for all Phase III oncology trials in the last 6 months"*
-   - *"What's the incidence rate of serious adverse events by drug category?"*
-   - *"Show patient exposure data by treatment duration and compliance rates"*
+**Follow-up Analysis:**
+- *"For our Gene Therapy neurology drugs, what's the relationship between treatment duration, patient age/BMI, and serious adverse event patterns across different countries?"*
+- *"Among patients who experienced serious adverse events, what demographic and baseline characteristics predict higher risk, and how does this vary by investigational site certification level?"*
+- *"What's the comparative safety analysis between our Alzheimer's indication drugs and diabetes indication drugs within the neurology therapeutic area?"*
 
-3. **Population Safety Analysis**
-   - *"How do adverse event rates vary by patient age groups and gender?"*
-   - *"Which ethnic groups show different safety profiles for immunology drugs?"*
-   - *"Are there BMI-related safety patterns we should monitor?"*
+**Required Data:**
+- **DIM_DRUGS**: Drug categories (filter Neurology), mechanisms, indications (Alzheimer's, Diabetes)
+- **FACT_TRIAL_RESULTS**: Adverse events, serious adverse events, treatment duration, baseline scores, compliance rates
+- **DIM_PATIENTS**: Age, BMI, gender, ethnicity, countries for demographic risk profiling
+- **DIM_SITES**: Site certification levels, countries for institutional risk factors
+- **DIM_TRIALS**: Trial phases, primary endpoints, sponsors for regulatory context
 
-4. **Regulatory Strategy Planning**
-   - *"What's the safety database size for each drug approaching regulatory submission?"*
-   - *"Compare our safety profiles to historical benchmarks by indication"*
-   - *"Which trials provide the strongest safety data for regulatory filings?"*
+### 2. **Regulatory Submission Safety Dossier Preparation**
+**Initial Question:** *"For our lead Phase III drug approaching FDA submission, what's the comprehensive patient exposure and safety database that demonstrates acceptable benefit-risk profile?"*
+
+**Follow-up Analysis:**
+- *"What's the exposure-adjusted adverse event rate analysis showing safety margins across different treatment arms and patient subpopulations?"*
+- *"For patients with treatment duration >180 days, how do safety profiles compare between high-compliance (>90%) and lower-compliance cohorts?"*
+- *"Which demographic subgroups show differential safety patterns that require special labeling considerations or post-market surveillance?"*
+
+**Required Data:**
+- **FACT_TRIAL_RESULTS**: Treatment duration (exposure calculation), adverse events, serious adverse events, compliance rates, treatment arms, outcomes
+- **DIM_PATIENTS**: Complete demographic profile for subgroup safety analysis
+- **DIM_TRIALS**: Phase III trials, primary endpoints, completion status
+- **DIM_DRUGS**: Development costs and mechanisms for benefit-risk contextualization
+- **DIM_SITES**: Geographic distribution for global safety profile
 
 ---
 
@@ -396,38 +357,68 @@ David evaluates the commercial potential of the drug pipeline, makes investment 
 - Market opportunity evaluation
 - Partnership and licensing opportunities
 
-**Example Question Flow:**
+**Complex Analysis Examples:**
 
-1. **Portfolio Performance Analysis**
-   - *"Calculate cost per successful patient outcome by drug and therapeutic area"*
-   - *"What's the ROI projection based on current success rates and development costs?"*
-   - *"Which therapeutic areas show the highest success rates across all phases?"*
+### 1. **Strategic Portfolio Optimization and Investment Prioritization**
+**Initial Question:** *"Given our current burn rate and upcoming funding round, which combination of therapeutic areas and drug mechanisms offers the optimal risk-adjusted returns for our next 18-month investment cycle?"*
 
-2. **Investment Prioritization**
-   - *"Show development costs vs success rates for all drugs in Phase II"*
-   - *"Which drugs have the fastest time to market based on enrollment and success rates?"*
-   - *"What's the probability of success for each drug based on current Phase II results?"*
+**Follow-up Analysis:**
+- *"For drugs with development costs >$200M, what's the probability-weighted return analysis based on current Phase II/III success rates, patient population sizes, and time-to-market projections?"*
+- *"Among our Gene Therapy and Monoclonal Antibody portfolios, which indication-mechanism combinations show the strongest competitive differentiation based on efficacy improvement scores and safety profiles?"*
+- *"What's the geographic market potential analysis for our successful Phase III programs, considering enrollment patterns, regulatory approval timelines, and regional safety profiles?"*
 
-3. **Market Opportunity Assessment**
-   - *"Which indications have the largest patient populations in our trials?"*
-   - *"Show geographic distribution of successful outcomes for market planning"*
-   - *"What's the competitive advantage of our mechanism types vs industry standards?"*
+**Required Data:**
+- **DIM_DRUGS**: Development costs, therapeutic categories, mechanisms, indications for portfolio analysis
+- **FACT_TRIAL_RESULTS**: Success rates, improvement scores, patient counts for efficacy assessment
+- **DIM_TRIALS**: Trial phases, status, planned enrollment, start/end dates for timeline analysis
+- **DIM_PATIENTS**: Geographic distribution, demographics for market sizing
+- **DIM_SITES**: Countries, site types for global market entry strategy
 
-4. **Strategic Decision Making**
-   - *"Which drug programs should we prioritize for additional investment?"*
-   - *"What's the risk-adjusted value of our oncology vs cardiology portfolios?"*
-   - *"Which trials provide the best data for out-licensing opportunities?"*
-   - *"Show sponsor performance benchmarks for potential partnership evaluation"*
+### 2. **Partnership and Licensing Opportunity Evaluation**
+**Initial Question:** *"Our board wants to evaluate potential out-licensing opportunities for non-core assets. Which programs in our portfolio have the strongest value proposition for pharmaceutical partners?"*
+
+**Follow-up Analysis:**
+- *"For our completed Phase II trials in Cardiology and Endocrinology, what's the licensing valuation framework based on patient exposure data, safety margins, and efficacy benchmarks?"*
+- *"Which of our drugs show differentiated performance in specific demographic subgroups (age, ethnicity, BMI) that could command premium licensing terms in targeted geographic markets?"*
+- *"Among our high-development-cost programs, which ones show sufficient clinical de-risking to warrant co-development partnerships vs full out-licensing?"*
+
+**Required Data:**
+- **DIM_DRUGS**: Development costs, therapeutic categories (Cardiology, Endocrinology), mechanisms for valuation
+- **FACT_TRIAL_RESULTS**: Treatment outcomes, adverse events, improvement scores, compliance rates for clinical de-risking
+- **DIM_PATIENTS**: Age, ethnicity, BMI for demographic differentiation analysis
+- **DIM_TRIALS**: Phase II completion status, trial sponsors for partnership benchmarking
+- **DIM_SITES**: Geographic coverage and certification levels for global partnership appeal
 
 ---
 
 ## 🎯 Cross-Functional Insights
 
-**Multi-Persona Questions:**
-These questions demonstrate how the same data can provide value across different organizational functions:
+**Multi-Persona Complex Analysis:**
+These advanced scenarios demonstrate how the same rich dataset supports sophisticated decision-making across different organizational functions:
 
-- *"For our lead diabetes drug, show enrollment by site, safety profile, efficacy outcomes, and development cost analysis"* (All personas)
-- *"Compare Phase III trial performance across therapeutic areas for timeline, budget, safety, and efficacy metrics"* (Trial Manager + Business Development)
-- *"Analyze patient demographic trends and outcomes to inform both site selection and regulatory submission strategy"* (Trial Manager + Regulatory Affairs)
+### **Integrated Portfolio Risk Assessment**
+*"Our Phase III oncology drug GammaTreat is approaching regulatory submission, but we're seeing mixed signals. What's the comprehensive risk-benefit analysis across operational, clinical, regulatory, and commercial dimensions?"*
 
-This comprehensive view enables data-driven decision making across the entire clinical development organization, from operational efficiency to strategic portfolio management.
+**Multi-Dimensional Analysis Requires:**
+- **Clinical Trial Manager**: Site performance optimization, enrollment efficiency, operational risk factors
+- **Drug Development Scientist**: Mechanism-specific efficacy patterns, safety-efficacy correlations, dose-response relationships
+- **Regulatory Affairs Manager**: Safety database adequacy, subpopulation risk profiles, exposure-adjusted event rates
+- **Business Development Executive**: ROI projections, competitive positioning, licensing valuation scenarios
+
+**Required Data Integration:**
+- **FACT_TRIAL_RESULTS**: Complete efficacy, safety, compliance, and outcome data across all dimensions
+- **DIM_DRUGS**: Development costs, mechanism, indication for commercial and clinical context
+- **DIM_PATIENTS**: Full demographic profiles for subgroup analysis and market segmentation
+- **DIM_SITES**: Geographic and operational metrics for global strategy
+- **DIM_TRIALS**: Phase progression, timelines, and regulatory milestones
+
+### **Strategic Geographic Expansion Decision**
+*"We're considering expanding our diabetes drug program into Asian markets. What's the integrated analysis framework for operational feasibility, clinical differentiation, regulatory strategy, and commercial opportunity?"*
+
+**Cross-Functional Requirements:**
+- Geographic site performance and certification analysis
+- Ethnicity-specific efficacy and safety profiles
+- Regulatory precedent analysis in target markets
+- Cost-effectiveness and market potential evaluation
+
+This sophisticated analytical approach enables evidence-based strategic decision making across the entire clinical development organization, leveraging the full depth of clinical trial data for competitive advantage.
