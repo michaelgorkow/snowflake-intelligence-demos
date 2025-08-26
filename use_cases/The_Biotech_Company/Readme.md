@@ -199,6 +199,14 @@ Comprehensive trial results connecting patients, drugs, sites, and trials with o
 | `OUTCOME` | String | Overall treatment outcome (Success, Failure, Partial Response, No Response) |
 | `VISIT_DATE` | Date | Date of outcome assessment |
 
+## 📋 Dataset Statistics
+
+- **Patients**: 1,000 de-identified patient records
+- **Drugs**: 20 pharmaceutical compounds across 5 therapeutic areas
+- **Sites**: 50 clinical trial sites worldwide
+- **Trials**: 15 clinical trials across 3 phases
+- **Results**: 1,621 individual patient outcome records
+
 ## 🤖 Text-to-SQL Agent Capabilities
 
 This dataset is designed to demonstrate how AI agents can translate natural language questions into SQL queries for pharmaceutical analytics. Here are the types of questions the agent can answer:
@@ -270,58 +278,156 @@ ORDER BY avg_improvement DESC;
 - *"Compare treatment arm performance for diabetes drugs across different BMI categories"*
 - *"Which combination of factors (age, gender, BMI) predict the best treatment outcomes?"*
 
-## 📋 Dataset Statistics
+# Example Use Cases for different Personas
 
-- **Patients**: 1,000 de-identified patient records
-- **Drugs**: 20 pharmaceutical compounds across 5 therapeutic areas
-- **Sites**: 50 clinical trial sites worldwide
-- **Trials**: 15 clinical trials across 3 phases
-- **Results**: 1,621 individual patient outcome records
+This section demonstrates how different stakeholders in a biotech organization can leverage the text-to-SQL agent to extract actionable insights from clinical trial data. Each persona represents a typical role with specific analytical needs and decision-making requirements.
 
-## 🚀 Getting Started
+## 🧑‍⚕️ Persona 1: Clinical Trial Manager - Sarah Chen
 
-### Prerequisites
-```bash
-pip install pandas numpy faker
-```
+**Role & Responsibilities:**
+Sarah manages multiple clinical trials across different therapeutic areas. She's responsible for trial operations, site performance monitoring, patient enrollment tracking, and ensuring studies stay on timeline and budget.
 
-### Generate Fresh Data
-```python
-from data_generator import generate_biotech_dataset
+**Key Insights Needed:**
+- Site performance and selection optimization
+- Patient enrollment efficiency and demographics
+- Trial timeline and milestone tracking
+- Resource allocation and capacity planning
 
-# Generate new dataset
-datasets = generate_biotech_dataset(
-    num_patients=1000,
-    num_drugs=20,
-    num_sites=50,
-    num_trials=15,
-    output_dir='data/'
-)
-```
+**Example Question Flow:**
 
-### Load into Snowflake
-The generated CSV files can be directly loaded into Snowflake tables using standard data loading procedures. The star schema design ensures optimal query performance for analytical workloads.
+1. **Initial Portfolio Overview**
+   - *"What is the current status of all ongoing trials by phase and therapeutic area?"*
+   - *"Which trials are behind on their planned enrollment targets?"*
 
-## 🎯 Use Cases for Pharmaceutical Organizations
+2. **Site Performance Analysis**
+   - *"Which clinical sites have the highest patient enrollment rates?"*
+   - *"Show me compliance rates by site certification level and country"*
+   - *"Which sites reported the most adverse events in the last quarter?"*
 
-This dataset demonstrates how Snowflake's AI agents can help pharmaceutical companies:
+3. **Patient Recruitment Strategy**
+   - *"What's the patient enrollment by country and site type?"*
+   - *"Which demographic groups are underrepresented in our oncology trials?"*
+   - *"Show enrollment trends by month for Phase II trials"*
 
-1. **Accelerate Clinical Decision Making** - Natural language queries for rapid trial insights
-2. **Enhance Safety Monitoring** - Quick identification of safety signals and adverse event patterns
-3. **Optimize Site Selection** - Data-driven decisions for future trial site selection
-4. **Improve Patient Stratification** - Identify optimal patient populations for specific treatments
-5. **Support Regulatory Submissions** - Generate evidence packages with comprehensive analytics
-6. **Enable Competitive Intelligence** - Benchmark performance against industry standards
-
-## 📝 Notes
-
-- All patient data is synthetic and de-identified
-- Data follows realistic pharmaceutical industry patterns
-- Schema designed for optimal analytical query performance
-- Compatible with Snowflake Cortex AI and text-to-SQL agents
-- Extensible design allows for additional data dimensions
+4. **Operational Optimization**
+   - *"What's the average time from trial start to reaching 50% enrollment by site type?"*
+   - *"Which site and drug combinations have the best patient retention rates?"*
 
 ---
 
-*This dataset is part of the Snowflake Intelligence Demos showcasing AI-powered analytics for the pharmaceutical industry.*
+## 🔬 Persona 2: Drug Development Scientist - Dr. Michael Rodriguez
 
+**Role & Responsibilities:**
+Dr. Rodriguez leads drug development programs and is responsible for evaluating drug efficacy, optimizing dosing strategies, understanding mechanism of action performance, and making go/no-go decisions for advancing compounds through development phases.
+
+**Key Insights Needed:**
+- Drug efficacy and safety profiles
+- Mechanism of action performance comparison
+- Dose-response relationships
+- Biomarker and endpoint analysis
+
+**Example Question Flow:**
+
+1. **Drug Performance Overview**
+   - *"What is the average improvement score for each drug category?"*
+   - *"Compare success rates between monoclonal antibodies and small molecules"*
+   - *"Which drugs had the best safety profile with fewest adverse events?"*
+
+2. **Mechanism Analysis**
+   - *"Show efficacy outcomes by drug mechanism across different indications"*
+   - *"What's the correlation between development cost and trial success rate?"*
+   - *"Which therapeutic categories show the highest improvement scores?"*
+
+3. **Safety Assessment**
+   - *"Identify patients with multiple serious adverse events by drug type"*
+   - *"Compare adverse event rates between treatment arms and placebo groups"*
+   - *"Show safety profiles for diabetes drugs across different patient age groups"*
+
+4. **Development Strategy**
+   - *"For oncology drugs in Phase II trials, what factors predict treatment success?"*
+   - *"Which drug-indication combinations show the most promise for Phase III advancement?"*
+   - *"What's the success rate for gene therapy mechanisms vs traditional approaches?"*
+
+---
+
+## 📋 Persona 3: Regulatory Affairs Manager - Jennifer Wu
+
+**Role & Responsibilities:**
+Jennifer ensures clinical trials comply with regulatory requirements, manages safety reporting obligations, prepares regulatory submissions, and monitors safety signals across the development portfolio.
+
+**Key Insights Needed:**
+- Safety signal detection and analysis
+- Regulatory compliance monitoring
+- Adverse event trending and reporting
+- Patient safety profiles by demographics
+
+**Example Question Flow:**
+
+1. **Safety Signal Detection**
+   - *"Which drug-site combinations have elevated safety concerns?"*
+   - *"Show adverse event patterns by treatment duration and patient demographics"*
+   - *"Identify any concerning trends in serious adverse events across trials"*
+
+2. **Regulatory Reporting Preparation**
+   - *"Generate safety summary for all Phase III oncology trials in the last 6 months"*
+   - *"What's the incidence rate of serious adverse events by drug category?"*
+   - *"Show patient exposure data by treatment duration and compliance rates"*
+
+3. **Population Safety Analysis**
+   - *"How do adverse event rates vary by patient age groups and gender?"*
+   - *"Which ethnic groups show different safety profiles for immunology drugs?"*
+   - *"Are there BMI-related safety patterns we should monitor?"*
+
+4. **Regulatory Strategy Planning**
+   - *"What's the safety database size for each drug approaching regulatory submission?"*
+   - *"Compare our safety profiles to historical benchmarks by indication"*
+   - *"Which trials provide the strongest safety data for regulatory filings?"*
+
+---
+
+## 💼 Persona 4: Business Development Executive - David Kim
+
+**Role & Responsibilities:**
+David evaluates the commercial potential of the drug pipeline, makes investment decisions, manages R&D portfolio priorities, and provides strategic guidance on which programs to advance, partner, or discontinue.
+
+**Key Insights Needed:**
+- Portfolio ROI and investment analysis
+- Pipeline risk assessment
+- Market opportunity evaluation
+- Partnership and licensing opportunities
+
+**Example Question Flow:**
+
+1. **Portfolio Performance Analysis**
+   - *"Calculate cost per successful patient outcome by drug and therapeutic area"*
+   - *"What's the ROI projection based on current success rates and development costs?"*
+   - *"Which therapeutic areas show the highest success rates across all phases?"*
+
+2. **Investment Prioritization**
+   - *"Show development costs vs success rates for all drugs in Phase II"*
+   - *"Which drugs have the fastest time to market based on enrollment and success rates?"*
+   - *"What's the probability of success for each drug based on current Phase II results?"*
+
+3. **Market Opportunity Assessment**
+   - *"Which indications have the largest patient populations in our trials?"*
+   - *"Show geographic distribution of successful outcomes for market planning"*
+   - *"What's the competitive advantage of our mechanism types vs industry standards?"*
+
+4. **Strategic Decision Making**
+   - *"Which drug programs should we prioritize for additional investment?"*
+   - *"What's the risk-adjusted value of our oncology vs cardiology portfolios?"*
+   - *"Which trials provide the best data for out-licensing opportunities?"*
+   - *"Show sponsor performance benchmarks for potential partnership evaluation"*
+
+---
+
+## 🎯 Cross-Functional Insights
+
+**Multi-Persona Questions:**
+These questions demonstrate how the same data can provide value across different organizational functions:
+
+- *"For our lead diabetes drug, show enrollment by site, safety profile, efficacy outcomes, and development cost analysis"* (All personas)
+- *"Compare Phase III trial performance across therapeutic areas for timeline, budget, safety, and efficacy metrics"* (Trial Manager + Business Development)
+- *"Analyze patient demographic trends and outcomes to inform both site selection and regulatory submission strategy"* (Trial Manager + Regulatory Affairs)
+
+This comprehensive view enables data-driven decision making across the entire clinical development organization, from operational efficiency to strategic portfolio management.
