@@ -14,6 +14,100 @@ The dataset consists of **5 interconnected tables** following a star schema patt
 - **4 Dimension Tables**: Patient demographics, drug information, trial sites, and trial metadata
 - **1 Fact Table**: Detailed trial results connecting all dimensions
 
+## Data Model
+
+The biotech dataset follows a **star schema** design with `FACT_TRIAL_RESULTS` as the central fact table connected to four dimension tables:
+
+```
+                    ┌──────────────────────────────┐
+                    │        DIM_PATIENTS          │
+                    │                              │
+                    │ • PATIENT_ID (PK)            │
+                    │ • AGE                        │
+                    │ • GENDER                     │
+                    │ • ETHNICITY                  │
+                    │ • BMI                        │
+                    │ • COUNTRY                    │
+                    │ • ENROLLMENT_DATE            │
+                    └──────────────┬───────────────┘
+                                   │
+                                   │
+         ┌─────────────────────────┐ │ ┌─────────────────────────┐
+         │       DIM_DRUGS         │ │ │       DIM_SITES         │
+         │                         │ │ │                         │
+         │ • DRUG_ID (PK)          │ │ │ • SITE_ID (PK)          │
+         │ • DRUG_NAME             │ │ │ • SITE_NAME             │
+         │ • CATEGORY              │ │ │ • CITY                  │
+         │ • MECHANISM             │ │ │ • COUNTRY               │
+         │ • INDICATION            │ │ │ • SITE_TYPE             │
+         │ • DOSAGE_FORM           │ │ │ • INVESTIGATOR_COUNT    │
+         │ • DEVELOPMENT_COST_USD  │ │ │ • CERTIFICATION_LEVEL   │
+         └─────────────┬───────────┘ │ └─────────────┬───────────┘
+                       │             │               │
+                       │             │               │
+                       └─────────────┼───────────────┘
+                                     │
+                    ┌─────────────────▼─────────────────┐
+                    │        FACT_TRIAL_RESULTS        │
+                    │                                  │
+                    │ • RESULT_ID                      │
+                    │ • TRIAL_ID (FK)                  │
+                    │ • PATIENT_ID (FK)                │
+                    │ • DRUG_ID (FK)                   │
+                    │ • SITE_ID (FK)                   │
+                    │ • TREATMENT_ARM                  │
+                    │ • BASELINE_SCORE                 │
+                    │ • ENDPOINT_SCORE                 │
+                    │ • IMPROVEMENT                    │
+                    │ • ADVERSE_EVENTS                 │
+                    │ • SERIOUS_ADVERSE_EVENTS         │
+                    │ • TREATMENT_DURATION_DAYS        │
+                    │ • COMPLIANCE_RATE                │
+                    │ • OUTCOME                        │
+                    │ • VISIT_DATE                     │
+                    └─────────────────┬─────────────────┘
+                                      │
+                                      │
+                    ┌─────────────────▼─────────────────┐
+                    │        DIM_TRIALS                │
+                    │                                  │
+                    │ • TRIAL_ID (PK)                  │
+                    │ • TRIAL_NAME                     │
+                    │ • PHASE                          │
+                    │ • STATUS                         │
+                    │ • PRIMARY_ENDPOINT               │
+                    │ • START_DATE                     │
+                    │ • END_DATE                       │
+                    │ • PLANNED_ENROLLMENT             │
+                    │ • SPONSOR                        │
+                    └──────────────────────────────────┘
+```
+
+### Key Relationships
+
+| Relationship | Description |
+|--------------|-------------|
+| **TRIAL_PATIENTS** | `FACT_TRIAL_RESULTS.PATIENT_ID` → `DIM_PATIENTS.PATIENT_ID` |
+| **TRIAL_DRUGS** | `FACT_TRIAL_RESULTS.DRUG_ID` → `DIM_DRUGS.DRUG_ID` |
+| **TRIAL_SITES** | `FACT_TRIAL_RESULTS.SITE_ID` → `DIM_SITES.SITE_ID` |
+| **TRIAL_STUDIES** | `FACT_TRIAL_RESULTS.TRIAL_ID` → `DIM_TRIALS.TRIAL_ID` |
+
+### Data Flow
+
+```
+Patient Demographics + Drug Information + Site Details + Trial Metadata
+                                ↓
+                      FACT_TRIAL_RESULTS
+                                ↓
+           Clinical Outcomes + Safety Data + Efficacy Measures
+```
+
+This star schema design enables:
+- **Fast analytical queries** across multiple dimensions
+- **Simplified joins** for complex business questions
+- **Scalable data architecture** for growing clinical trial datasets
+- **Optimized performance** for text-to-SQL AI agents
+
 ### 📊 Table Schemas
 
 #### **DIM_PATIENTS** - Patient Demographics
@@ -230,3 +324,4 @@ This dataset demonstrates how Snowflake's AI agents can help pharmaceutical comp
 ---
 
 *This dataset is part of the Snowflake Intelligence Demos showcasing AI-powered analytics for the pharmaceutical industry.*
+
