@@ -41,6 +41,9 @@ Each machine includes realistic manufacturers (Krones, Sidel, KUKA, etc.) and ge
 
 The Snowflake Intelligence Agent can answer sophisticated questions about manufacturing operations, equipment performance, and maintenance activities:
 
+> Have there been any anomalies for machine M_0007_02 in the past 14 days? If yes, what has been done to mitigate them? And how did they affect the machine's OEE? Send a detailed report to my email address.
+![EXAMPLE_QUESTION](resources/example.png)
+
 ## **Equipment Performance & OEE Analysis**
 - What manufacturers had the lowest OEE in the last 7 days?
 - Which bottle filler machines had the lowest overall OEE in the past 14 days?
