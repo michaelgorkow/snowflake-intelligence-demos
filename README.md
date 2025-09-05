@@ -75,7 +75,7 @@ In order to deploy a use case you simply run the __setup.sql__ from the respecti
 
 Example for deploying the Bottling Company use case:
 ```sql
-EXECUTE IMMEDIATE FROM @CORTEX_AGENTS_DEMO.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/use_cases/The_Bottling_Company/setup/setup.sql
+EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/use_cases/The_Bottling_Company/setup/setup.sql
   USING (BRANCH => 'main', EXECUTE_NOTEBOOKS => TRUE) DRY_RUN = FALSE;
 ```
 
