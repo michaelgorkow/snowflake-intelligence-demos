@@ -1,0 +1,458 @@
+{
+    "Tablet Press": {
+        "machines": [
+            {
+                "manufacturer": "Fette Compacting",
+                "machine_model": "FE55"
+            },
+            {
+                "manufacturer": "Fette Compacting", 
+                "machine_model": "P3100"
+            },
+            {
+                "manufacturer": "Korsch",
+                "machine_model": "XL800"
+            },
+            {
+                "manufacturer": "IMA Kilian",
+                "machine_model": "MODUL P"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Compression Force Sensor",
+                "metric": "compression_force",
+                "unit": "kN",
+                "min": 15,
+                "max": 85
+            },
+            {
+                "sensor_name": "Tablet Weight Sensor",
+                "metric": "tablet_weight",
+                "unit": "mg",
+                "min": 248,
+                "max": 252
+            },
+            {
+                "sensor_name": "Tablet Thickness Sensor",
+                "metric": "tablet_thickness",
+                "unit": "mm",
+                "min": 4.8,
+                "max": 5.2
+            },
+            {
+                "sensor_name": "Turret Speed Sensor",
+                "metric": "turret_speed",
+                "unit": "rpm",
+                "min": 20,
+                "max": 120
+            },
+            {
+                "sensor_name": "Hardness Tester",
+                "metric": "hardness",
+                "unit": "N",
+                "min": 80,
+                "max": 120
+            }
+        ]
+    },
+    "Fluid Bed Dryer": {
+        "machines": [
+            {
+                "manufacturer": "Glatt",
+                "machine_model": "WSG 120"
+            },
+            {
+                "manufacturer": "Aeromatic Fielder",
+                "machine_model": "STREA-1"
+            },
+            {
+                "manufacturer": "L.B. Bohle",
+                "machine_model": "BFS 60"
+            },
+            {
+                "manufacturer": "IMA",
+                "machine_model": "PerMix PFB"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Inlet Air Temperature Sensor",
+                "metric": "inlet_air_temperature",
+                "unit": "°C",
+                "min": 40,
+                "max": 80
+            },
+            {
+                "sensor_name": "Product Temperature Sensor",
+                "metric": "product_temperature",
+                "unit": "°C",
+                "min": 25,
+                "max": 55
+            },
+            {
+                "sensor_name": "Humidity Sensor",
+                "metric": "humidity",
+                "unit": "%RH",
+                "min": 20,
+                "max": 60
+            },
+            {
+                "sensor_name": "Airflow Rate Sensor",
+                "metric": "airflow_rate",
+                "unit": "m³/h",
+                "min": 800,
+                "max": 2500
+            },
+            {
+                "sensor_name": "Pressure Drop Sensor",
+                "metric": "pressure_drop",
+                "unit": "Pa",
+                "min": 200,
+                "max": 800
+            }
+        ]
+    },
+    "High Shear Mixer": {
+        "machines": [
+            {
+                "manufacturer": "Collette",
+                "machine_model": "Gral 600"
+            },
+            {
+                "manufacturer": "L.B. Bohle",
+                "machine_model": "KG 150"
+            },
+            {
+                "manufacturer": "Diosna",
+                "machine_model": "P 300"
+            },
+            {
+                "manufacturer": "Glatt",
+                "machine_model": "Pro-C-epT 25"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Impeller Speed Sensor",
+                "metric": "impeller_speed",
+                "unit": "rpm",
+                "min": 100,
+                "max": 800
+            },
+            {
+                "sensor_name": "Chopper Speed Sensor",
+                "metric": "chopper_speed",
+                "unit": "rpm",
+                "min": 500,
+                "max": 3000
+            },
+            {
+                "sensor_name": "Motor Torque Sensor",
+                "metric": "motor_torque",
+                "unit": "Nm",
+                "min": 150,
+                "max": 850
+            },
+            {
+                "sensor_name": "Bowl Temperature Sensor",
+                "metric": "bowl_temperature",
+                "unit": "°C",
+                "min": 20,
+                "max": 60
+            },
+            {
+                "sensor_name": "Granulation Power Sensor",
+                "metric": "power_consumption",
+                "unit": "kW",
+                "min": 5,
+                "max": 45
+            }
+        ]
+    },
+    "Capsule Filling Machine": {
+        "machines": [
+            {
+                "manufacturer": "Bosch",
+                "machine_model": "GKF 2500"
+            },
+            {
+                "manufacturer": "IMA",
+                "machine_model": "Zanasi 40E"
+            },
+            {
+                "manufacturer": "Modu-Cap",
+                "machine_model": "MG2 FUTURA+"
+            },
+            {
+                "manufacturer": "ACG",
+                "machine_model": "AF 180"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Capsule Weight Sensor",
+                "metric": "capsule_weight",
+                "unit": "mg",
+                "min": 195,
+                "max": 205
+            },
+            {
+                "sensor_name": "Fill Weight Sensor",
+                "metric": "fill_weight",
+                "unit": "mg",
+                "min": 148,
+                "max": 152
+            },
+            {
+                "sensor_name": "Vacuum Pressure Sensor",
+                "metric": "vacuum_pressure",
+                "unit": "mbar",
+                "min": 50,
+                "max": 200
+            },
+            {
+                "sensor_name": "Turret Speed Sensor",
+                "metric": "turret_speed",
+                "unit": "caps/min",
+                "min": 80000,
+                "max": 180000
+            },
+            {
+                "sensor_name": "Rejection Rate Sensor",
+                "metric": "rejection_rate",
+                "unit": "%",
+                "min": 0,
+                "max": 5
+            }
+        ]
+    },
+    "Coating Pan": {
+        "machines": [
+            {
+                "manufacturer": "Freund",
+                "machine_model": "Hi-Coater HCT-60"
+            },
+            {
+                "manufacturer": "O'Hara",
+                "machine_model": "Labcoat II"
+            },
+            {
+                "manufacturer": "Glatt",
+                "machine_model": "GC 1500"
+            },
+            {
+                "manufacturer": "IMA",
+                "machine_model": "Accela-Cota 48"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Pan Speed Sensor",
+                "metric": "pan_speed",
+                "unit": "rpm",
+                "min": 3,
+                "max": 15
+            },
+            {
+                "sensor_name": "Spray Rate Sensor",
+                "metric": "spray_rate",
+                "unit": "g/min",
+                "min": 50,
+                "max": 300
+            },
+            {
+                "sensor_name": "Inlet Air Temperature Sensor",
+                "metric": "inlet_air_temperature",
+                "unit": "°C",
+                "min": 45,
+                "max": 85
+            },
+            {
+                "sensor_name": "Exhaust Air Temperature Sensor",
+                "metric": "exhaust_air_temperature",
+                "unit": "°C",
+                "min": 35,
+                "max": 65
+            },
+            {
+                "sensor_name": "Tablet Bed Temperature Sensor",
+                "metric": "tablet_bed_temperature",
+                "unit": "°C",
+                "min": 30,
+                "max": 50
+            }
+        ]
+    },
+    "Liquid Filling Line": {
+        "machines": [
+            {
+                "manufacturer": "Bosch",
+                "machine_model": "VFL 2250"
+            },
+            {
+                "manufacturer": "IMA",
+                "machine_model": "FILLINGmachine 8000"
+            },
+            {
+                "manufacturer": "Watson-Marlow",
+                "machine_model": "520Du"
+            },
+            {
+                "manufacturer": "Cozzoli",
+                "machine_model": "VFS-24"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Fill Volume Sensor",
+                "metric": "fill_volume",
+                "unit": "mL",
+                "min": 9.8,
+                "max": 10.2
+            },
+            {
+                "sensor_name": "Vial Weight Sensor",
+                "metric": "vial_weight",
+                "unit": "g",
+                "min": 14.5,
+                "max": 15.5
+            },
+            {
+                "sensor_name": "Sterile Filter Pressure",
+                "metric": "filter_pressure",
+                "unit": "bar",
+                "min": 0.5,
+                "max": 2.5
+            },
+            {
+                "sensor_name": "Clean Room Pressure",
+                "metric": "room_pressure",
+                "unit": "Pa",
+                "min": 12,
+                "max": 20
+            },
+            {
+                "sensor_name": "Temperature Sensor",
+                "metric": "product_temperature",
+                "unit": "°C",
+                "min": 2,
+                "max": 8
+            }
+        ]
+    },
+    "Freeze Dryer (Lyophilizer)": {
+        "machines": [
+            {
+                "manufacturer": "SP Scientific",
+                "machine_model": "LyoStar 3"
+            },
+            {
+                "manufacturer": "IMA",
+                "machine_model": "LYOBETA 25"
+            },
+            {
+                "manufacturer": "Telstar",
+                "machine_model": "LyoBeta 35"
+            },
+            {
+                "manufacturer": "GEA",
+                "machine_model": "LYOPHIL 6"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Shelf Temperature Sensor",
+                "metric": "shelf_temperature",
+                "unit": "°C",
+                "min": -55,
+                "max": 40
+            },
+            {
+                "sensor_name": "Product Temperature Sensor",
+                "metric": "product_temperature",
+                "unit": "°C",
+                "min": -50,
+                "max": 25
+            },
+            {
+                "sensor_name": "Vacuum Pressure Sensor",
+                "metric": "vacuum_pressure",
+                "unit": "mTorr",
+                "min": 10,
+                "max": 500
+            },
+            {
+                "sensor_name": "Condenser Temperature Sensor",
+                "metric": "condenser_temperature",
+                "unit": "°C",
+                "min": -85,
+                "max": -50
+            },
+            {
+                "sensor_name": "Mass Spectrometer",
+                "metric": "moisture_content",
+                "unit": "%",
+                "min": 0.1,
+                "max": 5.0
+            }
+        ]
+    },
+    "Blister Packaging Machine": {
+        "machines": [
+            {
+                "manufacturer": "Uhlmann",
+                "machine_model": "UPS 4 ET"
+            },
+            {
+                "manufacturer": "IMA",
+                "machine_model": "BFB 2020-B"
+            },
+            {
+                "manufacturer": "Marchesini",
+                "machine_model": "MA 355"
+            },
+            {
+                "manufacturer": "Bosch",
+                "machine_model": "SVP 548"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Sealing Temperature Sensor",
+                "metric": "sealing_temperature",
+                "unit": "°C",
+                "min": 140,
+                "max": 200
+            },
+            {
+                "sensor_name": "Sealing Pressure Sensor",
+                "metric": "sealing_pressure",
+                "unit": "bar",
+                "min": 4,
+                "max": 12
+            },
+            {
+                "sensor_name": "Foil Tension Sensor",
+                "metric": "foil_tension",
+                "unit": "N",
+                "min": 20,
+                "max": 80
+            },
+            {
+                "sensor_name": "Tablet Detection Sensor",
+                "metric": "tablet_presence",
+                "unit": "boolean",
+                "min": 0,
+                "max": 1
+            },
+            {
+                "sensor_name": "Machine Speed Sensor",
+                "metric": "machine_speed",
+                "unit": "cycles/min",
+                "min": 40,
+                "max": 200
+            }
+        ]
+    }
+}
