@@ -1,3 +1,3 @@
 # The Bottling Company
 
-![BOTTLING_COMPANY](resources/bottling_company.png)
+![BOTTLING_COMPANY](resources/bottling_company.jpeg)
