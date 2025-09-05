@@ -73,9 +73,9 @@ EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE
 Every demo use case has its own folder [here](https://github.com/michaelgorkow/snowflake-intelligence-demos/tree/main/use_cases).
 In order to deploy a use case you simply run the __setup.sql__ from the respective folder.
 
-Example for deploying the Food and Beverage Company use case:
+Example for deploying the Bottling Company use case:
 ```sql
-EXECUTE IMMEDIATE FROM @CORTEX_AGENTS_DEMO.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/use_cases/The_Food_and_Beverage_Company/setup/setup.sql
+EXECUTE IMMEDIATE FROM @CORTEX_AGENTS_DEMO.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/use_cases/The_Bottling_Company/setup/setup.sql
   USING (BRANCH => 'main', EXECUTE_NOTEBOOKS => TRUE) DRY_RUN = FALSE;
 ```
 

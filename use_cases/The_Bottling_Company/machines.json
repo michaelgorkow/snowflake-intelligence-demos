@@ -1,0 +1,339 @@
+{
+    "Bottle Rinser": {
+        "machines": [
+            {
+                "manufacturer": "Krones",
+                "machine_model": "Variojet"
+            },
+            {
+                "manufacturer": "Krones",
+                "machine_model": "Linajet"
+            },
+            {
+                "manufacturer": "Lanfranchi",
+                "machine_model": "Rotary Air Rinser"
+            },
+            {
+                "manufacturer": "Lanfranchi",
+                "machine_model": "Linear Air Rinser"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Pressure Sensor",
+                "metric": "pressure",
+                "unit": "bar",
+                "min": 2,
+                "max": 6
+            },
+            {
+                "sensor_name": "Flow Sensor",
+                "metric": "flow_rate",
+                "unit": "m3/h",
+                "min": 1.5,
+                "max": 12
+            },
+            {
+                "sensor_name": "Temperature Sensor",
+                "metric": "temperature",
+                "unit": "°C",
+                "min": 5,
+                "max": 20
+            }
+        ]
+    },
+    "Bottle Filler": {
+        "machines": [
+            {
+                "manufacturer": "Krones",
+                "machine_model": "Mecafill"
+            },
+            {
+                "manufacturer": "Krones",
+                "machine_model": "Modulfill"
+            },
+            {
+                "manufacturer": "Sidel",
+                "machine_model": "Sidel EvoFILL"
+            },
+            {
+                "manufacturer": "Accutek",
+                "machine_model": "AccuWeight Fillers"
+            },
+            {
+                "manufacturer": "Accutek",
+                "machine_model": "Mini-Pinch"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Fill Level Sensor",
+                "metric": "fill_level",
+                "unit": "mm",
+                "min": 148,
+                "max": 152
+            },
+            {
+                "sensor_name": "Temperature Sensor",
+                "metric": "product_temperature",
+                "unit": "°C",
+                "min": 5,
+                "max": 15
+            },
+            {
+                "sensor_name": "Flow Meter",
+                "metric": "flow_rate",
+                "unit": "L/min",
+                "min": 20,
+                "max": 150
+            },
+            {
+                "sensor_name": "Pressure Sensor",
+                "metric": "tank_pressure",
+                "unit": "bar",
+                "min": 1,
+                "max": 3
+            },
+            {
+                "sensor_name": "Weight Sensor",
+                "metric": "bottle_weight",
+                "unit": "g",
+                "min": 500,
+                "max": 510
+            }
+        ]
+    },
+    "Capper": {
+        "machines": [
+            {
+                "manufacturer": "Sidel",
+                "machine_model": "Actima"
+            },
+            {
+                "manufacturer": "Krones",
+                "machine_model": "Modulcap"
+            },
+            {
+                "manufacturer": "Krones",
+                "machine_model": "Modulcrown"
+            },
+            {
+                "manufacturer": "Arol",
+                "machine_model": "Arol models"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Torque Sensor",
+                "metric": "torque",
+                "unit": "Nm",
+                "min": 1.5,
+                "max": 3.5
+            },
+            {
+                "sensor_name": "Proximity Sensor",
+                "metric": "state",
+                "unit": "boolean",
+                "min": 0,
+                "max": 1
+            },
+            {
+                "sensor_name": "Speed Sensor",
+                "metric": "speed",
+                "unit": "rpm",
+                "min": 10,
+                "max": 50
+            }
+        ]
+    },
+    "Labeler": {
+        "machines": [
+            {
+                "manufacturer": "KHS",
+                "machine_model": "Innoket"
+            },
+            {
+                "manufacturer": "Krones",
+                "machine_model": "Contiroll"
+            },
+            {
+                "manufacturer": "Krones",
+                "machine_model": "Ergomatic"
+            },
+            {
+                "manufacturer": "HERMA",
+                "machine_model": "HERMA 500"
+            },
+            {
+                "manufacturer": "Sidel",
+                "machine_model": "Rollquattro"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Label Position Sensor",
+                "metric": "position_offset",
+                "unit": "mm",
+                "min": -1,
+                "max": 1
+            },
+            {
+                "sensor_name": "Web Tension Sensor",
+                "metric": "tension",
+                "unit": "N",
+                "min": 50,
+                "max": 150
+            },
+            {
+                "sensor_name": "Encoder",
+                "metric": "motor_speed",
+                "unit": "rpm",
+                "min": 100,
+                "max": 500
+            }
+        ]
+    },
+    "Date Coder (Printer)": {
+        "machines": [
+            {
+                "manufacturer": "Domino",
+                "machine_model": "Ax-Series"
+            },
+            {
+                "manufacturer": "Domino",
+                "machine_model": "A-Series"
+            },
+            {
+                "manufacturer": "Videojet",
+                "machine_model": "1880 CIJ Printer"
+            },
+            {
+                "manufacturer": "Videojet",
+                "machine_model": "3640 CO2 Laser"
+            },
+            {
+                "manufacturer": "Leibinger",
+                "machine_model": "JET series"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Ink Level Sensor",
+                "metric": "ink_level",
+                "unit": "%",
+                "min": 5,
+                "max": 100
+            },
+            {
+                "sensor_name": "Print Head Temperature Sensor",
+                "metric": "temperature",
+                "unit": "°C",
+                "min": 20,
+                "max": 45
+            },
+            {
+                "sensor_name": "Bottle Presence Sensor",
+                "metric": "state",
+                "unit": "boolean",
+                "min": 0,
+                "max": 1
+            }
+        ]
+    },
+    "Shrink Wrapper / Packer": {
+        "machines": [
+            {
+                "manufacturer": "Krones",
+                "machine_model": "Variopac Pro"
+            },
+            {
+                "manufacturer": "Zappe",
+                "machine_model": "HVM"
+            },
+            {
+                "manufacturer": "Zappe",
+                "machine_model": "VPVA"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Film Tension Sensor",
+                "metric": "tension",
+                "unit": "N",
+                "min": 100,
+                "max": 300
+            },
+            {
+                "sensor_name": "Temperature Sensor",
+                "metric": "tunnel_temperature",
+                "unit": "°C",
+                "min": 150,
+                "max": 200
+            },
+            {
+                "sensor_name": "Motor Current Sensor",
+                "metric": "current",
+                "unit": "A",
+                "min": 10,
+                "max": 80
+            }
+        ]
+    },
+    "Palletizer": {
+        "machines": [
+            {
+                "manufacturer": "KUKA",
+                "machine_model": "KR Quantec"
+            },
+            {
+                "manufacturer": "FANUC",
+                "machine_model": "M-410iB series"
+            },
+            {
+                "manufacturer": "Premier Tech",
+                "machine_model": "RPL-4000 Series"
+            },
+            {
+                "manufacturer": "Premier Tech",
+                "machine_model": "RPL-2000 Series"
+            }
+        ],
+        "sensors": [
+            {
+                "sensor_name": "Position Sensor (Robot Arm)",
+                "metric": "position_x",
+                "unit": "mm",
+                "min": -2000,
+                "max": 2000
+            },
+            {
+                "sensor_name": "Position Sensor (Robot Arm)",
+                "metric": "position_y",
+                "unit": "mm",
+                "min": -2000,
+                "max": 2000
+            },
+            {
+                "sensor_name": "Position Sensor (Robot Arm)",
+                "metric": "position_z",
+                "unit": "mm",
+                "min": 0,
+                "max": 2500
+            },
+            {
+                "sensor_name": "Gripper Pressure Sensor",
+                "metric": "pressure",
+                "unit": "psi",
+                "min": 5,
+                "max": 20
+            },
+            {
+                "sensor_name": "Motor Current Sensor",
+                "metric": "current",
+                "unit": "A",
+                "min": 5,
+                "max": 50
+            }
+        ]
+    }
+}
