@@ -1,12 +1,12 @@
-# The Bottling Company
+# The Bottling Company 🏭
 
 ![BOTTLING_COMPANY](resources/bottling_company.jpg)
 
-# Overview
+# Overview 📋
 
 The Bottling Company is a comprehensive manufacturing intelligence demonstration that showcases how AI can transform industrial operations through deep data insights. This demo simulates a modern bottling facility with multiple production lines, each equipped with sophisticated machinery and sensor networks that continuously monitor critical operational parameters. The facility generates vast amounts of real-time data from machine sensors, production metrics, maintenance activities, and quality control systems, creating the perfect environment to demonstrate the power of Snowflake Intelligence for manufacturing analytics. By combining machine sensor data, Overall Equipment Effectiveness (OEE) metrics, anomaly detection, and maintenance reports, this demo illustrates how organizations can achieve operational excellence through data-driven decision making and predictive insights.
 
-# Data
+# Data 📊
 
 This demo contains a rich dataset that simulates a realistic bottling facility with comprehensive operational data across multiple domains:
 
@@ -23,7 +23,7 @@ This demo contains a rich dataset that simulates a realistic bottling facility w
 
 The dataset spans **14 days** of operational data across **3 plants** with **10 production lines** and **70 machines** equipped with **multiple sensors each**, generating comprehensive time-series data for realistic manufacturing analytics.
 
-# Production Line
+# Production Line ⚙️
 
 This demo simulates a typical bottling production line with **7 sequential machine types**, each equipped with multiple sensors:
 
@@ -37,7 +37,7 @@ This demo simulates a typical bottling production line with **7 sequential machi
 
 Each machine includes realistic manufacturers (Krones, Sidel, KUKA, etc.) and generates sensor data at minute-level intervals to demonstrate comprehensive manufacturing intelligence capabilities.
 
-# Example Questions
+# Example Questions ❓
 
 The Snowflake Intelligence Agent can answer sophisticated questions about manufacturing operations, equipment performance, and maintenance activities:
 
@@ -45,41 +45,41 @@ The Snowflake Intelligence Agent can answer sophisticated questions about manufa
 
 ![EXAMPLE_QUESTION](resources/example.png)
 
-## **Equipment Performance & OEE Analysis**
+## **Equipment Performance & OEE Analysis** 📈
 - What manufacturers had the lowest OEE in the last 7 days?
 - Which bottle filler machines had the lowest overall OEE in the past 14 days?
 - Show me the average OEE performance by production line for the current month
 - Which machines have consistently underperformed their expected production targets?
 
-## **Anomaly Detection & Monitoring**
+## **Anomaly Detection & Monitoring** 🚨
 - Have there been any anomalies for machine M_0007_02 in the past 14 days? If yes, what has been done to mitigate them? And how did they affect the machine's OEE? Send a detailed report to my email address.
 - What was the machine with the lowest OEE in the last 7 days? Visualize all relevant sensor values on an hourly level for that machine.
 
-## **Maintenance & Operations**
+## **Maintenance & Operations** 🔧
 - What maintenance activities were performed on machines with recent anomalies?
 - Show me all maintenance reports for machine M_0007_02?
 - Which production lines had the lowest availability?
 - Which production lines had the lowest quality?
 
-## **Cross-Domain Analytics**
+## **Cross-Domain Analytics** 🔄
 - Which plant has the most reliable equipment based OEE performance?
 - Generate a comprehensive operational health report for the past week including OEE trends and maintenance activities
 
-# Business Impact
+# Business Impact 💼
 
 The Snowflake Intelligence chatbot provides transformative business value by enabling manufacturing organizations to achieve operational excellence through AI-powered insights:
 
-## **Operational Efficiency Gains**
+## **Operational Efficiency Gains** ⚡
 - **Predictive Maintenance**: Early detection of equipment anomalies reduces unplanned downtime extends equipment lifespan
 - **OEE Optimization**: Performance monitoring and trend analysis help identify bottlenecks and optimize production processes
 - **Quality Improvement**: Sensor data correlation with quality metrics enables proactive quality control and reduces scrap rates
 
-## **Decision-Making Enhancement**
+## **Decision-Making Enhancement** 🎯
 - **Real-Time Visibility**: Instant access to comprehensive operational data enables faster, data-driven decision making
 - **Root Cause Analysis**: AI-powered correlation analysis quickly identifies the source of production issues
 - **Performance Benchmarking**: Cross-plant and cross-line performance comparisons drive continuous improvement initiatives
 
-## **Competitive Advantages**
+## **Competitive Advantages** 🏆
 - **Digital Transformation**: Accelerate Industry 4.0 initiatives with AI-powered manufacturing intelligence
 - **Scalability**: Cloud-native architecture supports expansion across multiple facilities and production lines
 - **Compliance & Reporting**: Automated generation of operational reports for regulatory compliance and management dashboards
