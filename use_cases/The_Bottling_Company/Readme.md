@@ -52,6 +52,14 @@ The Snowflake Intelligence Agent can answer sophisticated questions about manufa
 
 ![EXAMPLE_QUESTION](resources/example.png)
 
+<details>
+<summary>An example of such a report looks like this:</summary>
+
+[![EXAMPLE_REPORT](resources/example_report.jpg)](resources/example_report.jpg)
+
+</details>
+
+
 ## **Equipment Performance & OEE Analysis** 📈
 - What manufacturers had the lowest OEE in the last 7 days?
 - Which bottle filler machines had the lowest overall OEE in the past 14 days?
