@@ -6,6 +6,13 @@
 
 The Bottling Company is a comprehensive manufacturing intelligence demonstration that showcases how AI can transform industrial operations through deep data insights. This demo simulates a modern bottling facility with multiple production lines, each equipped with sophisticated machinery and sensor networks that continuously monitor critical operational parameters. The facility generates vast amounts of real-time data from machine sensors, production metrics, maintenance activities, and quality control systems, creating the perfect environment to demonstrate the power of Snowflake Intelligence for manufacturing analytics. By combining machine sensor data, Overall Equipment Effectiveness (OEE) metrics, anomaly detection, and maintenance reports, this demo illustrates how organizations can achieve operational excellence through data-driven decision making and predictive insights.
 
+## Use Case Deployment
+Execute this SQL Query to create and run the notebook in your account which will generate data and required services.
+```sql
+EXECUTE IMMEDIATE FROM @AI_DEVELOPMENT.PUBLIC.GITHUB_REPO_SNOWFLAKE_INTELLIGENCE_DEMOS/branches/main/use_cases/The_Bottling_Company/setup/setup.sql
+  USING (BRANCH => 'main', EXECUTE_NOTEBOOKS => TRUE) DRY_RUN = FALSE;
+```
+
 # Data 📊
 
 This demo contains a rich dataset that simulates a realistic bottling facility with comprehensive operational data across multiple domains:
